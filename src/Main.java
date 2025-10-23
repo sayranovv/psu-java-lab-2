@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
@@ -89,6 +91,57 @@ public class Main {
 
 
         } else if (exercise == 4 && task == 8) {
+
+            System.out.println("------------ Задача 4 | Задание 8 ------------");
+
+            City a, b, c, d, e, f;
+
+            Map<City, Integer> pathsA = new HashMap<>();
+            Map<City, Integer> pathsB = new HashMap<>();
+            Map<City, Integer> pathsC = new HashMap<>();
+            Map<City, Integer> pathsD = new HashMap<>();
+            Map<City, Integer> pathsE = new HashMap<>();
+            Map<City, Integer> pathsF = new HashMap<>();
+
+            a = new City("A");
+            b = new City("B");
+            c = new City("C");
+            d = new City("D");
+            e = new City("E");
+            f = new City("F");
+
+            pathsA.put(b, 5);
+            pathsA.put(f, 1);
+            pathsA.put(d, 6);
+
+            pathsB.put(a, 5);
+            pathsB.put(c, 3);
+
+            pathsC.put(b, 3);
+            pathsC.put(d, 4);
+
+            pathsD.put(a, 6);
+            pathsD.put(c, 4);
+            pathsD.put(e, 2);
+
+            pathsE.put(f, 2);
+
+            pathsF.put(b, 1);
+            pathsF.put(e, 2);
+
+            a = new City("A", pathsA);
+            b = new City("B", pathsB);
+            c = new City("C", pathsC);
+            d = new City("D", pathsD);
+            e = new City("E", pathsE);
+            f = new City("F", pathsF);
+
+            System.out.println(a);
+            System.out.println(b);
+            System.out.println(c);
+            System.out.println(d);
+            System.out.println(e);
+            System.out.println(f);
 
         } else if (exercise == 5 && task == 5) {
 

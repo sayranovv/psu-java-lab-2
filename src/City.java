@@ -11,6 +11,11 @@ public class City {
         this.paths = new HashMap<>();
     }
 
+    public City(String name, Map<City, Integer> initialPaths) {
+        this.name = name;
+        this.paths = new HashMap<>(initialPaths);
+    }
+
     public void addPath(City city, int cost) {
         paths.put(city, cost);
     }
