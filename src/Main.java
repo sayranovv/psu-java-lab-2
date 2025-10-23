@@ -6,11 +6,30 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Введите номер задания:");
-        int exercise = sc.nextInt();
+        int exercise = 0;
+        int task = 0;
 
-        System.out.println("Введите номер задачи:");
-        int task = sc.nextInt();
+        while (true) {
+            System.out.println("Введите номер задания:");
+            if (sc.hasNextInt()) {
+                exercise = sc.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка! Пожалуйста, введите целое число");
+                sc.next();
+            }
+        }
+
+        while (true) {
+            System.out.println("Введите номер задачи:");
+            if (sc.hasNextInt()) {
+                task = sc.nextInt();
+                break;
+            } else {
+                System.out.println("Ошибка! Пожалуйста, введите целое число");
+                sc.next();
+            }
+        }
 
         boolean valid = true;
 
@@ -144,6 +163,21 @@ public class Main {
             System.out.println(f);
 
         } else if (exercise == 5 && task == 5) {
+
+            System.out.println("------------ Задача 5 | Задание 5 ------------");
+
+            Fraction f1 = new Fraction(1, 3);
+            Fraction f2 = new Fraction(2, 3);
+            Fraction f3 = new Fraction(4, 5);
+
+            System.out.println(f1 + " + " + f2 + " = " + f1.sum(f2));
+            System.out.println(f1 + " - " + f2 + " = " + f1.minus(f2));
+            System.out.println(f1 + " * " + f2 + " = " + f1.multiply(f2));
+            System.out.println(f1 + " / " + f2 + " = " + f1.div(f2));
+            System.out.println(f1 + " - 1 = " + f1.minus(1));
+
+            Fraction result = f1.sum(f2).div(f3).minus(5);
+            System.out.println("(" + f1 + " + " + f2 + ") / " + f3 + " - 5 = " + result);
 
         } else {
             valid = false;
