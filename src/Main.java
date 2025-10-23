@@ -40,6 +40,20 @@ public class Main {
 
         } else if (exercise == 2 && task == 2) {
 
+            System.out.println("------------ Задача 2 | Задание 2 ------------");
+
+            Name n1 = new Name(null, "Клеопатра", null);
+            Name n2 = new Name("Пушкин", "Александр", "Сергеевич");
+            Name n3 = new Name("Маяковский", "Владимир", null);
+
+            PersonWithName p1 = new PersonWithName(n1, 152);
+            PersonWithName p2 = new PersonWithName(n2, 167);
+            PersonWithName p3 = new PersonWithName(n3, 189);
+
+            System.out.println(p1);
+            System.out.println(p2);
+            System.out.println(p3);
+
         } else if (exercise == 3 && task == 3) {
 
         } else if (exercise == 4 && task == 8) {
